@@ -105,6 +105,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'git@github.com:samueldsr/vim-latex-1.8.23.git'
 "Plugin 'Lokaltog/vim-powerline'
 "Plugin 'ShowMarks'  "A bug fix version is on my git repo
+"The original showmarks plugin has some bugs, use this on my github instead
 Plugin 'git@github.com:samueldsr/ShowMarks'
 Plugin 'gregsexton/VimCalc'
 
@@ -583,6 +584,11 @@ let g:showmarks_include="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 "if !hasmapto( '<Plug>ShowmarksClearMark'       ) | map <silent> <unique> <leader>mc :ShowMarksClearMark<cr>| endif
 "if !hasmapto( '<Plug>ShowmarksClearAll'        ) | map <silent> <unique> <leader>ma :ShowMarksClearAll<cr>|  endif
 "if !hasmapto( '<Plug>ShowmarksPlaceMark'       ) | map <silent> <unique> <leader>mm :ShowMarksPlaceMark<cr>| endif
+" <leader>mh :clear current marks
+"}}}
+
+"minibufexpl setup--------------------------------------------------{{{
+"let g:miniBufExplMaxHeight=2
 "}}}
 
 "simple calculator---------------------------------------------------------{{{
