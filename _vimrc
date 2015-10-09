@@ -648,8 +648,8 @@ let g:syntastic_cpp_compiler="gcc"
 let g:syntastic_cpp_compiler_options=" -std=c++11"
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0"}}}
+let g:syntastic_check_on_open=0
+let g:syntastic_check_on_wq=0 "}}}
 
 "YCM Setup-----------------------------------------------------"{{{
 "let g:ycm_global_ycm_extra_conf='$VIM\vimfiles\bundle\youcompleteme-win7-gvim\python\.ycm_extra_conf.py'
@@ -797,7 +797,6 @@ let g:airline#extensions#tabline#fnamemod = ':t'"}}}
 "tree style
 let g:netrw_liststyle = 3
 let g:netrw_list_hide='.*\.swp$'"}}}
-
 
 "minibufexpl setup--deprecated----------------------------------------------{{{
 "let g:miniBufExplMaxHeight=2
