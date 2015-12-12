@@ -31,6 +31,7 @@ Plugin 'VundleVim/vundle'
 Plugin 'vibrantink'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'samueldsr/csExplorer'
+Plugin 'altercation/vim-colors-solarized'
 
 "Language check (spell and grammar)
 Plugin 'LanguageTool'
@@ -192,7 +193,11 @@ set helplang=cn
 "colorscheme eclipse
 "colorscheme emacs
 "colorscheme blacklight
-colorscheme blackboard
+"colorscheme blackboard
+syntax enable
+set background=dark
+colorscheme solarized
+
 "autocmd BufEnter *.tex colorscheme pleasant
 "autocmd BufEnter *.tex colorscheme evening
 autocmd BufEnter *.tex colorscheme ashen
@@ -201,8 +206,8 @@ autocmd BufEnter *.tex colorscheme ashen
 "设置字体和主题
 if has("gui_running")
 	"vim 只支持等宽字体
-	set guifont=Consolas:h11
-	"set guifont=Ubuntu\ Mono:h12
+	"set guifont=Consolas:h11
+  set guifont=Ubuntu\ Mono:h12
 	"set guifont=Monaco:h10
 	"set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h11,DejaVu\ Sans\ Mono:h12,Menlo\ Regular\ for\ Powerline:h12,Monaco:h13 "use DejaVu Sans Mono for english on win/liunux, Monaco for mac
   set guifontwide=Yahei_Mono:h11,SimHei:h11,Monaco:h12 "use SimHei for Chinese, Monaco for mac
@@ -304,8 +309,6 @@ noremap <s-k> <c-w>k
 noremap <s-l> <c-w>l
 
 "navigate between tabs and buffers
-nnoremap <leader>bn :bnext<cr>
-nnoremap <leader>bp :bprev<cr>
 nnoremap tn :tabnext<cr>
 nnoremap tp :tabnprev<cr>
 nnoremap tt :tabnew<cr>
@@ -343,6 +346,10 @@ inoremap <C-u> <Esc>g<S-u>iwea
 
 "fast source ._vimrc
 nnoremap <silent> <leader>ss :source $VIM\_vimrc<CR>
+
+"fast run python file from vim
+"nnoremap <silent> <leader>pr :exec '!python' shellescape(@%,1)><cr>
+nnoremap <silent> <leader>pr :!python %<cr>
 """}}}
 
 "Buffer keymapping------------------------------------------------------------------------"{{{
@@ -532,9 +539,9 @@ if exists(":Tabularize")
 endif
 
 " Make sure that proper indenting is maintained in Ruby files
-setlocal shiftwidth=2
-setlocal softtabstop=2
-setlocal tabstop=2
+"setlocal shiftwidth=2
+"setlocal softtabstop=2
+"setlocal tabstop=2
 
 inoremap <silent> <Bar> <Bar><Esc>:call <SID>align()<CR>a
 
@@ -779,7 +786,7 @@ nmap <leader>p :CtrlP<cr>
 " Easy bindings for its various modes
 nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
-nmap <leader>bs :CtrlPMRU<cr>"}}}
+nmap <leader>br :CtrlPMRU<cr>"}}}
 
 "Vim-airlines settings---------------------------------------------------------"{{{
 " Enable the list of buffers
